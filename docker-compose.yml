@@ -1,0 +1,14 @@
+app:
+    build: ./
+    ports:
+        - "1337:1337"
+    volumes:
+        - ./:/app/
+    environment:
+        - MONGO_URL=mongodb://mongo:27017/dreamlines
+    links:
+        - mongo
+mongo:
+    image: mongo
+    ports:
+        - "27017:27017"

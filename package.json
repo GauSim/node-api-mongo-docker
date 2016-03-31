@@ -1,0 +1,27 @@
+{
+  "name": "node-csv-mongo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node ./dist/test.js",
+    "start": "node ./dist",
+    "build": "tsc -p .",
+    "clean": "find ./dist/ -type f -name '*.js' -delete && find ./dist/ -type f -name '*.js.map' -delete",
+    "watch-serve": "nodemon -L --exec 'npm run start' ./dist",
+    "prewatch": "npm run clean",
+    "watch": " npm run build -- --pretty -w",
+    "typings": "typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1",
+    "underscore": "^1.8.3"
+  }
+}
